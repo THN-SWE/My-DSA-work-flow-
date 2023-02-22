@@ -1,0 +1,20 @@
+
+l = [13, 46, 24, 52, 20, 9]
+
+def selectionSort(list) :
+    # main loop which selects every element one by one to compare 
+    
+    for i in range(0, len(list)):
+        # every time the main loop starts the smallest number will be set to the next element
+        smallest = list[i]
+        # the next smallest index will be the index of the new selected element in the list
+        smallest_index = i
+        # second loop which is going to compare the selected elements with other remaining elements 
+        for j in range(i+1, len(list)):
+            if list[j] < smallest:
+                smallest = list[j]
+                smallest_index = j
+        # the code for swaping the positions of two elements 
+        list[i], list[smallest_index] = list[smallest_index], list[i]
+    print('new sorted list will be: ', list)
+selectionSort(l)

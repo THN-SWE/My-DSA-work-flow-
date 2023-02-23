@@ -1,0 +1,21 @@
+l = [13, 46, 24, 52, 20, 9]
+
+# O(N2) for the worst and average cases and O(N) for the best case. N >> size of the array.
+# space complexity o(1)
+
+def bubbleSort(arr):
+    # this is the main loop and will run n-1 times since when its n-1 nth iteration there will be one unsorted element left
+    
+    for j in range(0, len(arr) -1):
+        
+        # the second inner loop for swaping the elements between them 
+        # the next main should go from starting to index len(arr) -j -1
+        # no need to go till the end of the arr sinice they are already sorted in previous iteration
+        
+        for i in range(0, len(arr) - j -1 ):
+            if arr[i] > arr[i + 1]:
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+            
+    print(arr)            
+
+bubbleSort(l)
